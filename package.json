@@ -1,0 +1,23 @@
+{
+  "name": "javascript-refresher",
+  "version": "1.0.0",
+  "description": "Learning / refreshing javascript from the ground up.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alicespyglass/javascript-refresher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alicespyglass/javascript-refresher/issues"
+  },
+  "homepage": "https://github.com/Alicespyglass/javascript-refresher#readme"
+}
