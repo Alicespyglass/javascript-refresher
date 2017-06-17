@@ -23,7 +23,7 @@ function Questions () {
     return ans2;
   };
 
-  // # remove instances of null (but NOT false) from an array
+  // 3. remove instances of null (but NOT false) from an array
   Questions.prototype.removeInstancesOfNull = function (array) {
     const ans3 = [];
     array.forEach(function (element) {
@@ -34,7 +34,7 @@ function Questions () {
     return ans3;
   };
 
-  // remove instances of nil AND false from an array
+  // 4. remove instances of nil AND false from an array
   Questions.prototype.removeInstancesOfNullAndFalse = function (array) {
     const ans4 = [];
     array.forEach(function (element) {
@@ -45,7 +45,7 @@ function Questions () {
     return ans4;
   };
 
-  // don't reverse the array, but reverse every word inside it. e.g.
+  // 5. don't reverse the array, but reverse every word inside it. e.g.
   // ['dog', 'monkey'] becomes ['god', 'yeknom']
   Questions.prototype.reverseEachWordInArrayBySplit = function (array) {
     const ans5a = [];
@@ -84,7 +84,7 @@ function Questions () {
     return ans5c;
   };
 
-  // given an array of student names, like ['Bob', 'Dave', 'Clive']
+  // 6.given an array of student names, like ['Bob', 'Dave', 'Clive']
   // give every possible pairing - in this case:
   // [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
   // make sure you don't have the same pairing twice,
@@ -99,10 +99,17 @@ function Questions () {
     return ans6;
   };
 
-  // discard the first 3 elements of an array,
+  // 7. discard the first 3 elements of an array,
   // e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
   Questions.prototype.discardFirst3Elements = function (array) {
     const ans7 = array.slice(3);
     return ans7;
   };
+
+  //8. add an element to the beginning of an array
+  Questions.prototype.addElementToBeginning = function (array, element) {
+    array.unshift(element);
+    return array;
+  };
+
 }

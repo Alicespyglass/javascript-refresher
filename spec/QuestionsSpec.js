@@ -50,4 +50,10 @@ describe('Questions', function () {
     expect(questions.discardFirst3Elements(n)).toEqual([4, 5, 6, 7]);
   });
 
+  it ('8 - add an element to the beginning of an array', function () {
+    const n = [2, 3, 4, 5],
+      element = 1;
+    expect(questions.addElementToBeginning(n, element)).toEqual([1, 2, 3, 4, 5]);
+  });
+
 })
