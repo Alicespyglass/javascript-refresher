@@ -56,4 +56,9 @@ describe('Questions', function () {
     expect(questions.addElementToBeginning(n, element)).toEqual([1, 2, 3, 4, 5]);
   });
 
+  it ('9 - sort an array of words by their last letter', function () {
+    const n = ['sky', 'puma', 'maker'];
+    expect(questions.sortArrayByLastLetter(n)).toEqual(['puma', 'maker', 'sky']);
+  });
+
 })

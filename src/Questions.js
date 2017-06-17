@@ -112,4 +112,11 @@ function Questions () {
     return array;
   };
 
+  // 9. sort an array of words by their last letter, e.g.
+  // ['sky', 'puma', 'maker'] becomes ['puma', 'maker', 'sky']
+  Questions.prototype.sortArrayByLastLetter = function (array) {
+    return array.sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
+  };
+
+
 }
