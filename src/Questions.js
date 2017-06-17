@@ -24,7 +24,7 @@ function Questions () {
   };
 
   // # remove instances of null (but NOT false) from an array
-  Questions.prototype.removeInstancesOfNil = function (array) {
+  Questions.prototype.removeInstancesOfNull = function (array) {
     const ans3 = [];
     array.forEach(function (element) {
       if (element !== null) {
@@ -32,5 +32,16 @@ function Questions () {
       }
     });
     return ans3;
+  };
+
+  // remove instances of nil AND false from an array
+  Questions.prototype.removeInstancesOfNullAndFalse = function (array) {
+    const ans4 = [];
+    array.forEach(function (element) {
+      if (element !== null && element !== false ) {
+        ans4.push(element);
+      }
+    });
+    return ans4;
   };
 }

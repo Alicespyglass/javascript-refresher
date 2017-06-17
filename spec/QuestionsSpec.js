@@ -5,7 +5,7 @@ describe('Questions', function () {
     questions = new Questions();
   });
 
-  it ('1 - Select Elements Starting With A', function () {
+  it ('1 - select elements starting with a', function () {
     const n = ['bananas', 'apples', 'pears', 'avocados'];
     expect(questions.selectElementsStartingWithA(n)).toEqual(['apples', 'avocados']);
   });
@@ -17,7 +17,12 @@ describe('Questions', function () {
 
   it ('3 - remove instances of null', function () {
     const n = ['a', 'b', null, null, false, 'c', null]
-    expect(questions.removeInstancesOfNukl(n)).toEqual(['a', 'b', false, 'c'])
+    expect(questions.removeInstancesOfNull(n)).toEqual(['a', 'b', false, 'c']);
+  })
+
+  it ('4 - remove instances of null and false', function () {
+    const n = ['a', 'b', null, null, false, 'c', null]
+    expect(questions.removeInstancesOfNullAndFalse(n)).toEqual(['a', 'b', 'c']);
   })
 
 });
