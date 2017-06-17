@@ -20,7 +20,17 @@ function Questions () {
         ans2.push(element);
       }
     });
-    return ans2
+    return ans2;
   };
 
+  // # remove instances of null (but NOT false) from an array
+  Questions.prototype.removeInstancesOfNil = function (array) {
+    const ans3 = [];
+    array.forEach(function (element) {
+      if (element !== null) {
+        ans3.push(element);
+      }
+    });
+    return ans3;
+  };
 }

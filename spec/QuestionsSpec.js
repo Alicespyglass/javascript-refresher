@@ -15,4 +15,9 @@ describe('Questions', function () {
     expect(questions.selectElementsStartingWithVowel(n)).toEqual(['omar', 'idris', 'angela']);
   });
 
+  it ('3 - remove instances of null', function () {
+    const n = ['a', 'b', null, null, false, 'c', null]
+    expect(questions.removeInstancesOfNukl(n)).toEqual(['a', 'b', false, 'c'])
+  })
+
 });
