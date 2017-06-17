@@ -15,9 +15,9 @@ function Questions () {
   // 2. keep only the elements that start with a vowel
   Questions.prototype.selectElementsStartingWithVowel = function (array) {
     const ans2 = [];
-    array.forEach(function (element) {
-      if (element.match(/^[aeiou]/i)) {
-        ans2.push(element);
+    array.forEach(function (word) {
+      if (word.match(/^[aeiou]/i)) {
+        ans2.push(word);
       }
     });
     return ans2;
@@ -44,4 +44,28 @@ function Questions () {
     });
     return ans4;
   };
+
+  // don't reverse the array, but reverse every word inside it. e.g.
+  // ['dog', 'monkey'] becomes ['god', 'yeknom']
+  Questions.prototype.reverseEachWordInArrayBySplit = function (array) {
+    const ans5a = [];
+    array.forEach(function (word) {
+      let reverse = word.split('').reverse().join('');
+      ans5a.push(reverse);
+    });
+    return ans5a;
+  };
+
+  Questions.prototype.reverseEachWordInArrayByLoop = function (array) {
+    const ans5b = [];
+    array.forEach(function (word) {
+      let newString = '';
+      for ( var i = word.length -1; i>= 0; i-- ) {
+        newString += word[i];
+      }
+      ans5b.push(newString);
+    });
+    return ans5b;
+  };
+
 }
