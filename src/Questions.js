@@ -118,5 +118,13 @@ function Questions () {
     return array.sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
   };
 
+  // 10 - cut strings in half, and return the first half, e.g.
+  // 'banana' becomes 'ban'. If the string is an odd number of letters
+  // round up - so 'apple' becomes 'app'
+  Questions.prototype.cutStringsInHalf = function (string) {
+    const stringLength = string.length;
+    const halfPoint = Math.ceil(stringLength/2);
+    return string.slice(0, halfPoint);
+  };
 
 }

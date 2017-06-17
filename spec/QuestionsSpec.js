@@ -61,4 +61,11 @@ describe('Questions', function () {
     expect(questions.sortArrayByLastLetter(n)).toEqual(['puma', 'maker', 'sky']);
   });
 
+  it ('10 - cut strings in half and return first half. Round up if string is odd', function () {
+    const a = 'banana',
+      b = 'apple';
+    expect(questions.cutStringsInHalf(a)).toEqual('ban');
+    expect(questions.cutStringsInHalf(b)).toEqual('app');
+  });
+
 })
