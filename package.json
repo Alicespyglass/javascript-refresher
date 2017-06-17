@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/Alicespyglass/javascript-refresher/issues"
   },
-  "homepage": "https://github.com/Alicespyglass/javascript-refresher#readme"
+  "homepage": "https://github.com/Alicespyglass/javascript-refresher#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-coveralls": "^1.0.1"
+  }
 }
