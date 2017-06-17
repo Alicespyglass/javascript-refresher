@@ -1,23 +1,56 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-  coveralls: {
-    // Options relevant to all targets
-    options: {
-      // When true, grunt-coveralls will only print a warning rather than
-      // an error, to prevent CI builds from failing unnecessarily (e.g. if
-      // coveralls.io is down). Optional, defaults to false.
-      force: false
-    },
-
-    your_target: {
-      // LCOV coverage file (can be string, glob or array)
-      src: 'coverage-results/extra-results-*.info',
+    pkg: grunt.file.readJSON('package.json'),
+    concat: {
       options: {
-        // Any options for just this target
+        separator: ';'
+      },
+      dist: {
+        src: ['src/**/*.js'],
+        dest: 'dist/<%= pkg.name %>.js'
       }
     },
-  },
-});
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+      },
+      dist: {
+        files: {
+          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+        }
+      }
+    },
+    qunit: {
+      files: ['test/**/*.html']
+    },
+    jshint: {
+      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+      options: {
+        // options here to override JSHint defaults
+        globals: {
+          jQuery: true,
+          console: true,
+          module: true,
+          document: true
+        }
+      }
+    },
+    watch: {
+      files: ['<%= jshint.files %>'],
+      tasks: ['jshint', 'qunit']
+    }
+  });
 
-}
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-qunit');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-coveralls');
+
+  grunt.registerTask('test', ['jshint', 'qunit']);
+
+  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+
+};
