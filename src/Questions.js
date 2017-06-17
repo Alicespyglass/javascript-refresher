@@ -89,14 +89,20 @@ function Questions () {
   // [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
   // make sure you don't have the same pairing twice,
   Questions.prototype.nCrPairing = function (array) {
-    var pairs = [];
-    var pos = 0;
+    const ans6 = [];
+    let pos = 0;
     for (var i = 0; i < array.length; i++) {
       for (var j = i + 1; j < array.length; j++) {
-        pairs[pos++] = [array[i], array[j]];
+        ans6[pos++] = [array[i], array[j]];
       }
     }
-    return pairs;
+    return ans6;
   };
 
+  // discard the first 3 elements of an array,
+  // e.g. [1, 2, 3, 4, 5, 6] becomes [4, 5, 6]
+  Questions.prototype.discardFirst3Elements = function (array) {
+    const ans7 = array.slice(3);
+    return ans7;
+  };
 }

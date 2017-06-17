@@ -45,4 +45,9 @@ describe('Questions', function () {
     expect(questions.nCrPairing(n)).toEqual([['Bob', 'Dave'], ['Bob', 'Clive'], ['Dave', 'Clive']]);
   });
 
+  it ('7 - discard first 3 elements of an array', function () {
+    const n = [1, 2, 3, 4, 5, 6, 7];
+    expect(questions.discardFirst3Elements(n)).toEqual([4, 5, 6, 7]);
+  });
+
 })
