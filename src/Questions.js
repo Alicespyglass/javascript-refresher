@@ -68,4 +68,22 @@ function Questions () {
     return ans5b;
   };
 
+  Questions.prototype.reverseEachWordInArrayByRecursion = function (array) {
+    const ans5c = [];
+    array.forEach(function (word) {
+      function reverseString(str) {
+        if ( str === '' ) {
+          return '';
+        } else {
+          return reverseString(str.substr(1)) + str.charAt(0);
+        }
+      }
+      let reverseword = reverseString(word);
+      ans5c.push(reverseword);
+    });
+    return ans5c;
+  };
+
+  
+
 }

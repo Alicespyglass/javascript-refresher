@@ -33,6 +33,11 @@ describe('Questions', function () {
   it ('5b - reverse each word in array - loop', function () {
     const n = ['dog', 'monkey', 'elephant'];
     expect(questions.reverseEachWordInArrayByLoop(n)).toEqual(['god', 'yeknom', 'tnahpele']);
-  })
+  });
 
-});
+  it ('5c - reverse each word in array - recursion', function () {
+    const n = ['dog', 'monkey', 'elephant'];
+    expect(questions.reverseEachWordInArrayByRecursion(n)).toEqual(['god', 'yeknom', 'tnahpele']);
+  });
+
+})
