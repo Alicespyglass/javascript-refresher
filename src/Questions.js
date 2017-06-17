@@ -84,6 +84,19 @@ function Questions () {
     return ans5c;
   };
 
-  
+  // given an array of student names, like ['Bob', 'Dave', 'Clive']
+  // give every possible pairing - in this case:
+  // [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
+  // make sure you don't have the same pairing twice,
+  Questions.prototype.nCrPairing = function (array) {
+    var pairs = [];
+    var pos = 0;
+    for (var i = 0; i < array.length; i++) {
+      for (var j = i + 1; j < array.length; j++) {
+        pairs[pos++] = [array[i], array[j]];
+      }
+    }
+    return pairs;
+  };
 
 }

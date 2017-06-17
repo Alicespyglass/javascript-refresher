@@ -1,6 +1,6 @@
 # javascript-refresher
 
-Learning / refreshing javascript from the ground up.
+Learning / refreshing javascript from the ground up - solving simple puzzles using javascript functions, getting incrementally more difficult.
 
 Tested with Jasmine.
 

@@ -40,4 +40,9 @@ describe('Questions', function () {
     expect(questions.reverseEachWordInArrayByRecursion(n)).toEqual(['god', 'yeknom', 'tnahpele']);
   });
 
+  it ('6 - nCr pairing combinations', function () {
+    const n = ['Bob', 'Dave', 'Clive'];
+    expect(questions.nCrPairing(n)).toEqual([['Bob', 'Dave'], ['Bob', 'Clive'], ['Dave', 'Clive']]);
+  });
+
 })
