@@ -191,6 +191,14 @@ function Questions () {
   // 16 - add up all the numbers in an array, so [1, 3, 5, 6]
   // returns 15
 
+    Questions.prototype.addUpAllNumbers = function (array) {
+      let ans16 =
+      array.reduce(function (a, b) {
+        return a + b;
+      }, 0);
+      return ans16;
+    };
+
   // 17 - turn an array into itself repeated twice. So [1, 2, 3]
   // becomes [1, 2, 3, 1, 2, 3]
 

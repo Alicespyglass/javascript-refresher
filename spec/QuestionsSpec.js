@@ -95,4 +95,9 @@ describe('Questions', function () {
     expect(questions.longestWord(a)).toEqual('different');
   });
 
+  it ('16 - add up all numbers in an array', function () {
+    const a = [1, 3, 5, 6];
+    expect(questions.addUpAllNumbers(a)).toEqual(15);
+  });
+
 })
