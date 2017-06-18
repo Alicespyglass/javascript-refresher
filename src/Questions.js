@@ -148,7 +148,7 @@ function Questions () {
     array.forEach(function (integer) {
       integer % 2 ? oddArray.push(integer) : evenArray.push(integer);
     });
-    
+
     return ans12;
   };
 
@@ -157,7 +157,26 @@ function Questions () {
   // e.g. 'bob'. So in the array ['bob', 'radar', 'eat'], there
   // are 2 palindromes (bob and radar), so the method should return 2
 
+  Questions.prototype.countPalindromes = function (array) {
+    let ans13 = 0;
+    array.forEach(function (word) {
+      if (word === word.split('').reverse().join('')) {
+        ans13 += 1;
+      }
+    });
+    return ans13;
+  };
+
   // 14 - return the shortest word in an array
+  Questions.prototype.shortestWord = function (array) {
+    let ans14 = array[0];
+    array.forEach(function (word) {
+      if (word.length < ans14.length) {
+        ans14 = word;
+      }
+    });
+    return ans14;
+  };
 
   // 15 - return the shortest word in an array
 

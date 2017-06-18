@@ -23,6 +23,8 @@
   "devDependencies": {
     "coveralls": "^2.13.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jasmine": "^2.6.0"
+  },
   "false": {}
 }

@@ -80,5 +80,14 @@ describe('Questions', function () {
     expect(questions.oddEvenArrays(a)).toEqual([[2, 4, 6], [1, 3, 5, 7]]);
   });
 
+  it ('13 - count the number of elements in an array that are palindromes', function () {
+    const a = ['bob', 'radar', 'alex', 'noon', 'banana'];
+    expect(questions.countPalindromes(a)).toEqual(3);
+  });
+
+  it ('14 - return the shortest word in an array', function () {
+    const a = ['here', 'is', 'a', 'bunch', 'of', 'words', 'of', 'different', 'lengths'];
+    expect(questions.shortestWord(a)).toEqual('a');
+  });
 
 })
