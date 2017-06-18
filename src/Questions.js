@@ -209,8 +209,11 @@ function Questions () {
     return ans17;
   };
 
-
   // 18 - convert a symbol into a string
+  Questions.prototype.symbolToString = function (symbol) {
+    let ans18 = symbol.toString();
+    return ans18;
+  };
 
   // 19 - get the average from an array, rounded to the nearest integer
   // so [10, 15, 25] should return 17

@@ -62,7 +62,7 @@ describe('Questions', function () {
   });
 
   it ('10 - cut strings in half and return first half. Round up if string is odd', function () {
-    const a = 'banana',
+    let a = 'banana',
       b = 'apple';
     expect(questions.cutStringsInHalf(a)).toEqual('ban');
     expect(questions.cutStringsInHalf(b)).toEqual('app');
@@ -105,4 +105,9 @@ describe('Questions', function () {
     expect(questions.repeatArray(a)).toEqual([1, 2, 3, 1, 2, 3]);
   });
 
-})
+  it ('18 - convert a symbol into a string', function () {
+    let a = Symbol();
+    expect(questions.symbolToString(a)).toEqual('Symbol()');
+  });
+
+});
