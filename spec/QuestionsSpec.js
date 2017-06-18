@@ -75,4 +75,10 @@ describe('Questions', function () {
     expect(questions.turnNegative(b)).toEqual(-7);
   });
 
+  it ('12 - turn array of numbers into 2 arrays of odd and even numbers (even first)', function () {
+    const a = [1, 2, 3, 4, 5, 6, 7];
+    expect(questions.oddEvenArrays(a)).toEqual([[2, 4, 6], [1, 3, 5, 7]]);
+  });
+
+
 })
