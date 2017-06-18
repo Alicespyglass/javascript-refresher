@@ -100,4 +100,9 @@ describe('Questions', function () {
     expect(questions.addUpAllNumbers(a)).toEqual(15);
   });
 
+  it ('17 - turn array into itself repeated twice', function () {
+    const a = [1, 2, 3];
+    expect(questions.repeatArray(a)).toEqual([1, 2, 3, 1, 2, 3]);
+  });
+
 })
