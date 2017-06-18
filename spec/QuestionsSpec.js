@@ -68,4 +68,11 @@ describe('Questions', function () {
     expect(questions.cutStringsInHalf(b)).toEqual('app');
   });
 
+  it ('11 - turn a positive integer into a negative integer', function () {
+    const a = 5,
+      b = -7;
+    expect(questions.turnNegative(a)).toEqual(-5);
+    expect(questions.turnNegative(b)).toEqual(-7);
+  });
+
 })

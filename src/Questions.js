@@ -129,6 +129,10 @@ function Questions () {
 
   // 11 - turn a positive integer into a negative integer. A negative integer
   // stays negative
+  Questions.prototype.turnNegative = function (integer) {
+    const ans11 = integer > 0 ? -integer : integer;
+    return ans11;
+  };
 
 
   // 12 - turn an array of numbers into two arrays of numbers, one an array of
