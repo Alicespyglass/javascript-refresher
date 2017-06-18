@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "./spec/QuestionsSpec.js"
+    "test": "node ./spec/QuestionsSpec.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,8 @@
   },
   "homepage": "https://github.com/Alicespyglass/javascript-refresher#readme",
   "devDependencies": {
-    "coveralls": "^2.13.1",
-    "grunt": "^1.0.1",
-    "grunt-coveralls": "^1.0.1"
+    "coveralls": "^2.13.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "false": {}
 }
