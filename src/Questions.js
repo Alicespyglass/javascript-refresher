@@ -179,7 +179,15 @@ function Questions () {
   };
 
   // 15 - return the shortest word in an array
-
+  Questions.prototype.longestWord = function (array) {
+    let ans15 = array[0];
+    array.forEach(function (word) {
+      if (word.length > ans15.length) {
+        ans15 = word;
+      }
+    });
+    return ans15;
+  };
   // 16 - add up all the numbers in an array, so [1, 3, 5, 6]
   // returns 15
 

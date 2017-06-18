@@ -90,4 +90,9 @@ describe('Questions', function () {
     expect(questions.shortestWord(a)).toEqual('a');
   });
 
+  it ('15 - return the longest word in an array', function () {
+    const a = ['here', 'is', 'a', 'bunch', 'of', 'words', 'of', 'different', 'lengths'];
+    expect(questions.longestWord(a)).toEqual('different');
+  });
+
 })
