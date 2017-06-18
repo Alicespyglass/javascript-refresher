@@ -217,6 +217,15 @@ function Questions () {
 
   // 19 - get the average from an array, rounded to the nearest integer
   // so [10, 15, 25] should return 17
+  Questions.prototype.averageArray = function (array) {
+    let n = array.length;
+    let average =
+    array.reduce(function (a, b) {
+      return a + b;
+    }, 0);
+    let ans18 = Math.round(average/n);
+    return ans18;
+  };
 
   // 20 - get all the elements in an array, up until the first element
   // which is greater than five. e.g.

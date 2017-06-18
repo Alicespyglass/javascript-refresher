@@ -110,4 +110,9 @@ describe('Questions', function () {
     expect(questions.symbolToString(a)).toEqual('Symbol()');
   });
 
+  it ('19 - get the average from an array, rounded to nearest integer', function () {
+    const a = [10, 15, 25];
+    expect(questions.averageArray(a)).toEqual(17);
+  });
+
 });
