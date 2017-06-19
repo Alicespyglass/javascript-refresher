@@ -232,6 +232,15 @@ function Questions () {
   // [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
   // becomes [1, 3, 5, 4, 1, 2]
 
+  Questions.prototype.until6Elements = function (array) {
+    const ans19 = [];
+    for (let i = 0; i < array.length -1; i++) {
+      if (i === 6) { break; }
+      ans19.push(array[i]);
+    }
+    return ans19;
+  };
+
   // 21 - turn an array (with an even number of elements) into a hash, by
   // pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
   // {'a' => 'b', 'c' => 'd'}

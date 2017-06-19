@@ -115,4 +115,9 @@ describe('Questions', function () {
     expect(questions.averageArray(a)).toEqual(17);
   });
 
+  it ('20 - get elements in an array, up until the first greater than 5', function () {
+    const a = [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7];
+    expect(questions.until6Elements(a)).toEqual([1, 3, 5, 4, 1, 2]);
+  });
+
 });
