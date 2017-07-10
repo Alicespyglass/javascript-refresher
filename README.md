@@ -11,8 +11,9 @@ Clone directory
 $ cd to/target/location
 $ git clone https://github.com/Alicespyglass/javascript-refresher.git
 ```
-Install dependencies (node)
+cd into directory and install dependencies (node)
 ```
+$ cd javascript-refresher
 $ npm install
 $ npm update
 ```
